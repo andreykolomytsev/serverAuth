@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.AuthenticateController.AuthenticateAsync(Application.DTOs.Auth.RequestAuthentication)">
+            <summary>
+            Форма авторизации
+            </summary>
+            <param name="request">Данные для входа</param>
+            <returns>Токен доступа</returns>
+        </member>
+        <member name="M:WebApi.Controllers.AuthenticateController.RefreshTokenAsync(System.String)">
+            <summary>
+            Обновить токен обновления
+            </summary>
+            <param name="token">Токен обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AuthenticateController.RevokeRefreshTokenAsync(System.String)">
+            <summary>
+            Отозвать токен обновления
+            </summary>
+            <param name="token">Токен обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AuthenticateController.CheckTokenAsync(System.String)">
+            <summary>
+            Проверить токен доступа
+            </summary>
+            <param name="token">Токен доступа</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServiceController.GetAll(Application.Parameters.PaginationFilter)">
+            <summary>
+            Получить список всех микросервисов
+            </summary>
+            <param name="pagination">Фильтр</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServiceController.GetById(System.Int64)">
+            <summary>
+            Получить микросервис
+            </summary>
+            <param name="serviceId">Id микросервиса</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServiceController.Post(Application.DTOs.MicroService.RequestService)">
+            <summary>
+            Добавить новый микросервис
+            </summary>
+            <param name="request">Параметры микросервиса</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServiceController.Update(Application.DTOs.MicroService.RequestService,System.Int64)">
+            <summary>
+            Изменить микросервис
+            </summary>
+            <param name="request">Параметры микросервиса</param>
+            <param name="serviceId">Id микросервиса для изменения</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ServiceController.Delete(System.Int64)">
+            <summary>
+            Удалить микросервис
+            </summary>
+            <param name="serviceId">Id микросервиса</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TokenController.GetAllAccessTokenAsync(Application.Parameters.PaginationFilter,Application.Parameters.TokenFilter)">
+            <summary>
+            Получить список всех токенов доступа
+            </summary>
+            <param name="filter">Фильтр</param>
+            <param name="pagination">Постраничный вывод</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TokenController.GetAllRefreshTokenAsync(Application.Parameters.PaginationFilter,Application.Parameters.TokenFilter)">
+            <summary>
+            Получить список всех токенов обновления
+            </summary>
+            <param name="filter">Фильтр</param>
+            <param name="pagination">Постраничный вывод</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetAll(Application.Parameters.PaginationFilter,Application.Parameters.UserFilter)">
+            <summary>
+            Получить список всех пользователей
+            </summary>
+            <param name="filter">Фильтр</param>
+            <param name="pagination">Постраничный вывод</param>
+            <returns>Отфильтрованный список пользователей</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetUsersByParentUser(System.Int64,Application.Parameters.PaginationFilter,Application.Parameters.UserFilter)">
+            <summary>
+            Получить список подпользователей пользователя
+            </summary>
+            <param name="userId">Пользотель для получения подпользователей</param>
+            <param name="filter">Фильтр</param>
+            <param name="pagination">Постраничный вывод</param>
+            <returns>Отфильтрованный список пользователей</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetById(System.Int64)">
+            <summary>
+            Получить пользователя
+            </summary>
+            <param name="userId">Id пользователя</param>
+            <returns>Запрошенный пользователь</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.Post(System.Nullable{System.Int64},Application.DTOs.Users.RequestCreateUser)">
+            <summary>
+            Добавить нового пользователя
+            </summary>
+            <param name="userId">Добавить к пользователю с ID</param>
+            <param name="request">Параметры пользователя</param>
+            <returns>Созданный пользователь</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.Update(System.Int64,Application.DTOs.Users.RequestUpdateUser)">
+            <summary>
+            Изменить пользователя
+            </summary>
+            <param name="userId">Id пользователя</param>
+            <param name="request">Параметры пользователя</param>
+            <returns>Измененный пользователь</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.Delete(System.Int64)">
+            <summary>
+            Удалить пользователя
+            </summary>
+            <param name="userId">Id пользователя</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetAccount">
+            <summary>
+            Получить данные аккаунта
+            </summary>
+            <returns>Запрошенный аккаунт</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.UpdateAccount(Application.DTOs.Users.RequestUpdateProfile)">
+            <summary>
+            Обновить данные аккаунта
+            </summary>
+            <param name="request">Параметры пользователя</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.ChangePasswordAccount(Application.DTOs.Users.RequestChangePassword)">
+            <summary>
+            Изменить пароль аккаунта
+            </summary>
+            <param name="request">Новый пароль</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetServicesByUser(System.Int64)">
+            <summary>
+            Получить микросервисы пользователя
+            </summary>
+            <param name="userId">Id пользователя</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.UpdateServicesByUser(System.Int64,Application.DTOs.MicroService.RequestUserService)">
+            <summary>
+            Обновить микросервисы пользователю
+            </summary>
+            <param name="userId">Id пользователя</param>
+            <param name="request">Список сервисов</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Extensions.AppExtensions.UseSwaggerExtension(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Swagger
+            </summary>
+            <param name="app">Конфигурация приложения</param>
+        </member>
+        <member name="M:WebApi.Extensions.AppExtensions.UseErrorHandlingMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Перехватчик ошибок
+            </summary>
+            <param name="app">Конфигурация приложения</param>
+        </member>
+        <member name="M:WebApi.Extensions.AppExtensions.UseJWTMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Перехватчик JWT
+            </summary>
+            <param name="app">Конфигурация приложения</param>
+        </member>
+        <member name="M:WebApi.Extensions.ServiceExtensions.AddSwaggerExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Конфигурация Swagger
+            </summary>
+            <param name="services">Спецификация сервиса</param>
+        </member>
+        <member name="M:WebApi.Extensions.ServiceExtensions.AddApiVersioningExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Конфигурация версий API 
+            </summary>
+            <param name="services">Спецификация сервиса</param>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.#ctor">
+            <summary>
+            Конструктор с базовой авторизацией
+            </summary>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.#ctor(System.String[])">
+            <summary>
+            Конструктор с авторизацией на основе прав доступа
+            </summary>
+            <param name="permissions">Список прав доступа для авторизации</param>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.#ctor(Application.Enums.Roles[])">
+            <summary>
+            Конструктор с авторизацией на основе ролей
+            </summary>
+            <param name="roles">Список ролей для авторизации</param>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.#ctor(Application.Enums.Roles[],System.String[])">
+            <summary>
+            Конструктор с авторизацией на основе прав доступа и ролей
+            </summary>
+            <param name="roles">Список ролей для авторизации</param>
+            <param name="permissions">Список прав доступа для авторизации</param>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.CheckAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Проверка не был ли токен отменен вручную
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.PermissionAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Проверка авторизации для прав доступа
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApi.Helpers.AuthorizeAttribute.RoleAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Проверка авторизации для ролей
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WebApi.Services.CurrentUser">
+            <summary>
+            Текущий авторизованный пользователь
+            </summary>
+        </member>
+    </members>
+</doc>

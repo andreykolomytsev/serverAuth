@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application</name>
+    </assembly>
+    <members>
+        <member name="M:Application.Constants.AllPermissions.GetRegisteredPermissions">
+            <summary>
+            Возвращает список Permissions.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Enums.Roles">
+            <summary>
+            Список базовых ролей
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.PaginationFilter.PageNumber">
+            <summary>
+            Номер страницы
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.PaginationFilter.PageSize">
+            <summary>
+            Кол-во элементов на странице
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.UserFilter.FirstName">
+            <summary>
+            Имя
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.UserFilter.LastName">
+            <summary>
+            Фамилия
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.UserFilter.MiddleName">
+            <summary>
+            Отчество
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.UserFilter.Email">
+            <summary>
+            Почта
+            </summary>
+        </member>
+        <member name="P:Application.Parameters.UserFilter.PhoneNumber">
+            <summary>
+            Номер телефона
+            </summary>
+        </member>
+        <member name="T:Application.Wrappers.PaginatedResult`1">
+            <summary>
+            Обертка ответа контроллера для разбивки на страницы
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+        </member>
+        <member name="P:Application.Wrappers.PaginatedResult`1.CurrentPage">
+            <summary>
+            Текущая страница
+            </summary>
+        </member>
+        <member name="P:Application.Wrappers.PaginatedResult`1.TotalPages">
+            <summary>
+            Всего страниц
+            </summary>
+        </member>
+        <member name="P:Application.Wrappers.PaginatedResult`1.TotalCount">
+            <summary>
+            Всего записей
+            </summary>
+        </member>
+        <member name="P:Application.Wrappers.PaginatedResult`1.PageSize">
+            <summary>
+            Элементов на странице
+            </summary>
+        </member>
+        <member name="P:Application.Wrappers.PaginatedResult`1.HasPreviousPage">
+            <summary>
+            Есть ли предыдущая страница
+            </summary>
+        </member>
+        <member name="P:Application.Wrappers.PaginatedResult`1.HasNextPage">
+            <summary>
+            Есть ли следующая страница
+            </summary>
+        </member>
+        <member name="T:Application.Wrappers.Result">
+            <summary>
+            Обертка ответа
+            </summary>
+        </member>
+    </members>
+</doc>
